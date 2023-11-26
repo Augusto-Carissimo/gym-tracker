@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Repetions, type: :model do
+RSpec.describe Repetion, type: :model do
   describe 'associations' do
     it { is_expected.to belongs_to(:set) }
   end
