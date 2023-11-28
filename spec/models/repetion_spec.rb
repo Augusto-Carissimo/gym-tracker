@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Repetion, type: :model do
   describe 'associations' do
-    it { is_expected.to belongs_to(:workout) }
+    it { is_expected.to belong_to(:workout) }
   end
 
   describe 'validations' do
