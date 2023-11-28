@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Repetion < ApplicationRecord
   belongs_to :workout
 
@@ -5,6 +7,6 @@ class Repetion < ApplicationRecord
   validates :weight, numericality: { greater_than_or_equal_to: 0 }
 
   def total_weight
-    reps*weight
+    reps * weight
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Workout < ApplicationRecord
   belongs_to :exercise
   has_many :repetions
@@ -7,6 +9,6 @@ class Workout < ApplicationRecord
   end
 
   def total_weight
-    repetions.map { |repetion| repetion.total_weight }.max
+    repetions.map(&:total_weight).max
   end
 end

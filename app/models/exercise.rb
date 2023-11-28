@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 class Exercise < ApplicationRecord
   has_many :workouts
 
   validates :name, uniqueness: true
 
   def max_weight
-    workouts.map { |workout| workout.max_weight }.max
+    workouts.map(&:max_weight).max
   end
 
   def total_weight
-    workouts.map { |workout| workout.total_weight }.max
+    workouts.map(&:total_weight).max
   end
 end
