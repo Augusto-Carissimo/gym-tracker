@@ -3,6 +3,6 @@ class Workout < ApplicationRecord
   has_many :repetions
 
   def max_weight
-    30
+    repetions.maximum(:weight)
   end
 end
