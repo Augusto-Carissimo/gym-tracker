@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :workout do
-    exercise { nil }
+    exercise
   end
 end
