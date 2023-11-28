@@ -15,5 +15,9 @@ RSpec.describe Workout, type: :model do
     it 'max weight' do
       expect(workout.max_weight).to eq(30)
     end
+
+    it 'total_weight' do
+      expect(workout.total_weight).to eq(300)
+    end
   end
 end

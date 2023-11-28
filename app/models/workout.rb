@@ -5,4 +5,8 @@ class Workout < ApplicationRecord
   def max_weight
     repetions.maximum(:weight)
   end
+
+  def total_weight
+    repetions.map { |repetion| repetion.total_weight }.max
+  end
 end
