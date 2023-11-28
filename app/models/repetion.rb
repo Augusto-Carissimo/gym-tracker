@@ -7,8 +7,4 @@ class Repetion < ApplicationRecord
   def total_weight
     100
   end
-
-  def max_weight
-    10
-  end
 end

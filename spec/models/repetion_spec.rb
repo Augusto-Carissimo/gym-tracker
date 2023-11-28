@@ -16,9 +16,5 @@ RSpec.describe Repetion, type: :model do
     it 'total weight' do
       expect(repetion.total_weight).to eq(100)
     end
-
-    it 'max weight' do
-      expect(repetion.max_weight).to eq(10)
-    end
   end
 end
