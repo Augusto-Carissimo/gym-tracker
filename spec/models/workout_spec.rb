@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Set, type: :model do
+RSpec.describe Workout, type: :model do
   describe 'associations' do
     it { is_expected.to belongs_to(:exercise) }
     it { is_expected.to have_many(:repetions) }
