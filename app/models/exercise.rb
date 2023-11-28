@@ -6,4 +6,8 @@ class Exercise < ApplicationRecord
   def max_weight
     workouts.map { |workout| workout.max_weight }.max
   end
+
+  def total_weight
+    workouts.map { |workout| workout.total_weight }.max
+  end
 end

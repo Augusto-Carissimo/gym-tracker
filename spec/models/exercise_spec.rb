@@ -16,10 +16,14 @@ RSpec.describe Exercise, type: :model do
     let!(:workout3) { create(:workout, exercise: exercise) }
     let!(:repetion1) { create(:repetion, workout: workout1, reps: 10, weight: 10) }
     let!(:repetion2) { create(:repetion, workout: workout2, reps: 10, weight: 20) }
-    let!(:repetion3) { create(:repetion, workout: workout3, reps: 10, weight: 30) }
+    let!(:repetion3) { create(:repetion, workout: workout3, reps: 10, weight: 40) }
 
     it 'max weight' do
-      expect(exercise.max_weight).to eq(30)
+      expect(exercise.max_weight).to eq(40)
+    end
+
+    it 'total weight' do
+      expect(exercise.total_weight).to eq(400)
     end
   end
 end
