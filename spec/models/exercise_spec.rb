@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe Exercise, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:workouts) }
+    it { is_expected.to have_many(:routine_exercises) }
   end
 
   describe 'validations' do

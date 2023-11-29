@@ -2,6 +2,7 @@
 
 class Exercise < ApplicationRecord
   has_many :workouts
+  has_many :routine_exercises
 
   validates :name, uniqueness: true
 
