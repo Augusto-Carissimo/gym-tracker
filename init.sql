@@ -1,0 +1,2 @@
+CREATE USER gym-tracker;
+ALTER USER gym-tracker WITH SUPERUSER;
