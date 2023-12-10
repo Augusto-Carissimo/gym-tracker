@@ -18,7 +18,7 @@ RSpec.describe "ExercisesController", type: :request do
     get exercise_path(exercise)
     expect(response).to render_template(:show)
     expect(response).to have_http_status(:ok)
-    expect(response.body).to include(exercise.name)
+    expect(response.body).to include CGI.escapeHTML(exercise.name)
   end
 end
 
@@ -36,7 +36,7 @@ end
       expect { post exercises_path, params: { exercise: { name: 'Squat' } } }
         .to change(Exercise, :count).by(1)
       expect(Exercise.last.name).to eq('Squat')
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(302)
     end
   end
 
@@ -55,7 +55,7 @@ end
       patch exercise_path(exercise), params: { exercise: { name: 'Deadlift' } }
       expect(exercise.reload.name).to eq('Deadlift')
       expect(response).to have_http_status(:found)
-      expect(response).to redirect_to(exercise_path)
+      expect(response).to redirect_to(exercise_path(exercise))
     end
   end
 

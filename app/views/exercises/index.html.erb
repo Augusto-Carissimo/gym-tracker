@@ -6,7 +6,7 @@
   <% @exercises.each do |exercise| %>
     <%= render exercise %>
     <p>
-      <%= link_to "Show this exercise", exercise %>
+      <%= link_to exercise.name, exercise %>
     </p>
   <% end %>
 </div>
