@@ -20,6 +20,7 @@ services:
     image: postgres
     restart: always
     environment:
+     POSTGRES_NAME: gym-tracker
      POSTGRES_USER: gym-tracker
      POSTGRES_PASSWORD: password
     volumes:
